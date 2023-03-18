@@ -4,17 +4,17 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), 
 html: {class: "flex flex-col items-center gap-3 max-w-full"}) do |f| %>
-  <div class="field">
+  <div class="px-5">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, class: "w-full" %>
   </div>
 
-  <div class="field">
+  <div class="px-5">
     <%= f.label :password %><br />
     <%= f.password_field :password, class: "w-full" %>
   </div>
 
-  <div class="actions">
+  <div>
     <%= f.submit "Log in", class: "px-12 py-4 pb-2 pt-2 font-semibold text-xl text-white 
     bg-blue-500 rounded-xl cursor-pointer" %>
   </div>
