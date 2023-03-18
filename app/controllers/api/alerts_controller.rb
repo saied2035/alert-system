@@ -8,7 +8,7 @@ class Api::AlertsController < ApiController
 	  if alert.save
 	    render json: "Alert was created successfully."
 	  else
-	    render alert.errors	
+	    render json: alert.errors	
 	  end	
 	end
 
