@@ -1,10 +1,9 @@
 <div class="flex justify-center h-[100vh] max-w-full">
 <div class="mt-1 flex flex-col items-center h-fit gap-6 max-w-full">
-<h2 class="text-3xl dark:text-white">Sign up</h2>
+<h2 class="text-3xl">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), 
 html: {class: "flex flex-col items-center gap-3 max-w-full"}) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :name %><br />
@@ -34,7 +33,7 @@ html: {class: "flex flex-col items-center gap-3 max-w-full"}) do |f| %>
     bg-blue-500 rounded-xl cursor-pointer'%>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %>
+<%= render "devise/shared/error_messages", resource: resource %>
 </div>
 </div>

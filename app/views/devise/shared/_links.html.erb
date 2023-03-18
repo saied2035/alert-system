@@ -1,7 +1,7 @@
 <%- if controller_name != 'sessions' %>
 <div class="flex flex-col sm:flex-row justify-start sm:justify-between 
 items-center sm:items-start gap-2">
-  <p class="text-base text-center dark:text-white">You have an account?</p>
+  <p class="text-base text-center">You have an account?</p>
   <%= link_to "Log in", new_user_session_path, class: 'underline text-base text-lg font-medium text-blue-400' %><br />
 </div>
 <% end %>
@@ -9,8 +9,7 @@ items-center sm:items-start gap-2">
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
 <div class="flex flex-col sm:flex-row justify-start sm:justify-between 
 items-center sm:items-start gap-2">
-  <p class="text-base text-center dark:text-white">You don't have an account?</p>
-  <%= link_to "Sign up", new_user_registration_path, class: 'underline text-base text-lg font-medium text-blue-400 
-dark:text-cyan-600' %><br />
+  <p class="text-base text-center">You don't have an account?</p>
+  <%= link_to "Sign up", new_user_registration_path, class: 'underline text-base text-lg font-medium text-blue-400' %><br />
 </div>
 <% end %>
