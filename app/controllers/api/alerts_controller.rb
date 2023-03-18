@@ -1,5 +1,7 @@
 class Api::AlertsController < ApiController
 	def index
+	  alerts = Alert.all
+	  render json: alerts
 	end
 	def create
 	end
@@ -7,6 +9,6 @@ class Api::AlertsController < ApiController
 	private
 
 	def alert_params
-	  params.require(:alert).permit(:type, :description, tag: [], :origin)	
+	  params.require(:alert).permit(:type, :description, :tag, :origin)	
 	end	
 end
