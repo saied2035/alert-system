@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :alerts, only: [:index, :create]
     resources :sessions, only: [:create]
+    resources :registrations, only: [:create]
   end
   root "alerts#index"
 end
