@@ -1,4 +1,4 @@
-<% color = if alert.type == "portal_opened" %>
+<% color = if alert.type.downcase == "portal_opened" %>
 	  <%"text-green-500"%>
 	<%else%>
 	  <%"text-red-500"%>
@@ -6,6 +6,8 @@
 <p class="<%=color%> text-sm font-normal">
 	<span>[<%= alert.created_at%>] </span>
 	<span><%=alert.description%> </span>
-	<span>tags: [<%=alert.tag[0]%>, <%=alert.tag[1]%>] </span>
-    <span>origin: <%=alert.origin%> </span>
+	<span>
+	  [<%= render partial: "tag", collection: alert.tag %>]
+    </span>
+    <span>Origin: <%=alert.origin%> </span>
 </p>
