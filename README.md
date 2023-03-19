@@ -1,8 +1,9 @@
 # Alert System
 
-## preequests
+## prerequisites
   - postgresql database in your machine
   - postman to test API endpoints
+  
 ## Getting Started
 
 To get a local copy. Follow these simple example steps.
