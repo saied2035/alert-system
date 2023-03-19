@@ -1,24 +1,82 @@
-# README
+# Alert System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## prerequisites
+  - postgresql database in your machine
+  - postman to test API endpoints
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To get a local copy. Follow these simple example steps.
+- for SSH:
+     - `git clone git@github.com:saied2035/alert-system.git`
+- for https:
+     - `git clone https://github.com/saied2035/alert-system.git`
 
-* System dependencies
+Then run:
 
-* Configuration
+***note: please, make sure that postgresql server is running***
 
-* Database creation
+**If you don't know how to start postgresql server you cam check this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html)**
 
-* Database initialization
+- `bundle install`
+- `rails db:create`
+- `rails db:migrate`
+- `rails s`
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+- All pages and API endpoints are authenticated
 
-* ...
+- browser endpoints:
+     - http://localhost:3000/
+          - lists all alerts
+     - http://localhost:3000/users/sign_in
+          - form to sign in for authentication
+     - http://localhost:3000/users/sign_up
+          - form to sign up for authentication
+
+- API endpoints:
+     - http://localhost:3000/api/alerts (get request)
+          - gets all alerts
+          - No params needed
+
+     - http://localhost:3000/api/alerts (post request)
+          - creates an alert
+          - params sample
+          ```json
+          {
+            "alert": {
+              "type": "Portal_opened",
+              "tag": ["verions2.3.9"],
+              "description": "A portal was opened.",
+              "origin": "123.89.00.2"
+            }
+          }
+          ```
+
+     - http://localhost:3000/api/sessions (post request)
+          - API endpoint to sign in for authentication
+          - params sample
+          ```json
+          {
+            "user": {
+              "email": "saied2@gmail.com",
+              "password": "123456"
+            }
+          }
+          ```
+
+     - http://localhost:3000/api/registrations (post request)
+          - API endpoint to sign up for authentication
+          - params sample
+          ```json
+          {
+            "user": {
+              "name": "Saied2",
+               "email": "saied2@gmail.com",
+               "password": "123456",
+               "password_confirmation": "123456"
+            }
+          }
+          ```
