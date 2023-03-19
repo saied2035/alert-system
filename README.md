@@ -7,15 +7,17 @@
 
 To get a local copy. Follow these simple example steps.
 - for SSH:
-     - `git clone git@github.com:saied2035/Rails-budget-app.git`
+     - `git clone git@github.com:saied2035/alert-system.git`
 - for https:
-     - `git clone https://github.com/saied2035/Rails-budget-app.git`
+     - `git clone https://github.com/saied2035/alert-system.git`
 
 Then run:
 ***note: please, make sure that postgresql server is running***
-**If you don't know how to run postgresql server you cam check this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html)**
- 
+**If you don't know how to start postgresql server you cam check this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html)**
+
 - `bundle install`
+- `rails db:create`
+- `rails db:migrate`
 - `rails s`
 
 ## Usage
