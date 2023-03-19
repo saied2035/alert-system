@@ -37,10 +37,11 @@ Then run:
 
 - API endpoints:
      - http://localhost:3000/api/alerts (get request)
-          - No params needed
           - gets all alerts
+          - No params needed
 
      - http://localhost:3000/api/alerts (post request)
+          - creates an alert
           - params sample
           ```json
           {
@@ -52,9 +53,9 @@ Then run:
             }
           }
           ```
-          - creates an alert
 
      - http://localhost:3000/api/sessions (post request)
+          - API endpoint to sign in for authentication
           - params sample
           ```json
           {
@@ -64,9 +65,9 @@ Then run:
             }
           }
           ```
-          - API endpoint to sign in for authentication
 
      - http://localhost:3000/api/registrations (post request)
+          - API endpoint to sign up for authentication
           - params sample
           ```json
           {
@@ -78,4 +79,3 @@ Then run:
             }
           }
           ```
-          - API endpoint to sign up for authentication
