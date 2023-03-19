@@ -15,6 +15,7 @@ To get a local copy. Follow these simple example steps.
 Then run:
 
 ***note: please, make sure that postgresql server is running***
+
 **If you don't know how to start postgresql server you cam check this [link](https://tableplus.com/blog/2018/10/how-to-start-stop-restart-postgresql-server.html)**
 
 - `bundle install`
